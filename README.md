@@ -2,7 +2,7 @@
 
 ## 💻 Sobre o Projeto
 
-E-shop desenvolvido em React.js
+Pagina de biblioteca de filmes desenvolvido em React.js com consumo de API.
 
 ## 🎨 Layout
 
@@ -29,7 +29,7 @@ Rodar o comando npm run serve.
 
 Clique no link abaixo para visualizar em desktop: 
 
-https:/
+https://devmov-mmc.netlify.app/
 
 ## 📝 Licença
 
