@@ -2,7 +2,7 @@
 
 ## 💻 Sobre o Projeto
 
-Pagina de biblioteca de filmes desenvolvido em React.js com consumo de API.
+Página de biblioteca de filmes desenvolvido em React.js com consumo de API.
 
 ## 🎨 Layout
 
