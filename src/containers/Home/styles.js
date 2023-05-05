@@ -29,7 +29,6 @@ export const Container = styled.div`
 `
 
 export const Info = styled.div`
-
    z-index: 2;
    padding: 20px;
    width: 50%;
@@ -55,7 +54,6 @@ export const Poster = styled.div`
       img {
          width: 400px;
          border-radius: 30px;
-      
       }
 `
 
