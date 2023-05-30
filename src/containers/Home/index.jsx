@@ -5,16 +5,27 @@ import Button from '../../components/Button'
 
 const Home = () => {
     const [movie, setMovie] = useState()
+    const [topMovies, setMovies] = useState()
 
     useEffect(() => {
         async function getMovies() {
             const { data: { results } } = await api.get('/movie/popular')
 
             setMovie(results[0])
-
         }
 
         getMovies()
+
+        async function getTopMovies() {
+            const { data: { results } } = await api.get('/movie/top_rated')
+
+            console.log(results)
+
+            setMovies(results[0])
+        }
+
+        getMovies()
+        getTopMovies()
     }, [])
 
     return (
