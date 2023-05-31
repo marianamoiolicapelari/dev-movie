@@ -2,10 +2,11 @@ import api from '../../services/api'
 import { Background, Container, Info, ContainerButtons, Poster } from './styles'
 import { useState, useEffect } from 'react'
 import Button from '../../components/Button'
+import Slider from '../../components/Slider'
 
 const Home = () => {
     const [movie, setMovie] = useState()
-    const [topMovies, setMovies] = useState()
+    const [topMovies, setTopMovies] = useState()
 
     useEffect(() => {
         async function getMovies() {
@@ -21,7 +22,7 @@ const Home = () => {
 
             console.log(results)
 
-            setMovies(results[0])
+            setTopMovies(results)
         }
 
         getMovies()
@@ -47,9 +48,9 @@ const Home = () => {
                             <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="capa-do-filme" />
                         </Poster>
                     </Container>
-
                 </Background>
             )}
+            {topMovies && <Slider info={topMovies} title={'Top Filmes'} />}
         </>
 
     )
