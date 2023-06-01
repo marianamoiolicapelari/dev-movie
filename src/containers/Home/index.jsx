@@ -1,5 +1,6 @@
 import api from '../../services/api'
 import { Background, Container, Info, ContainerButtons, Poster } from './styles'
+import { getImages } from '../../utils/getImages'
 import { useState, useEffect } from 'react'
 import Button from '../../components/Button'
 import Slider from '../../components/Slider'
@@ -33,7 +34,7 @@ const Home = () => {
         <>
             {movie && (
                 <Background
-                    img={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                    img={getImages(movie.backdrop_path)}
                 >
                     <Container>
                         <Info>
@@ -45,7 +46,7 @@ const Home = () => {
                             </ContainerButtons>
                         </Info>
                         <Poster>
-                            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="capa-do-filme" />
+                            <img src={getImages(movie.poster_path)} alt="capa-do-filme" />
                         </Poster>
                     </Container>
                 </Background>
