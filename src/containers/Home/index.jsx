@@ -8,6 +8,7 @@ import Slider from '../../components/Slider'
 const Home = () => {
     const [movie, setMovie] = useState()
     const [topMovies, setTopMovies] = useState()
+    const [topSeries, setTopSeries] = useState()
 
     useEffect(() => {
         async function getMovies() {
@@ -26,8 +27,17 @@ const Home = () => {
             setTopMovies(results)
         }
 
+        async function getTopSeries() {
+            const { data: { results } } = await api.get('/tv/top_rated')
+
+            console.log(results)
+
+            setTopSeries(results)
+        }
+
         getMovies()
         getTopMovies()
+        getTopSeries()
     }, [])
 
     return (
@@ -52,6 +62,7 @@ const Home = () => {
                 </Background>
             )}
             {topMovies && <Slider info={topMovies} title={'Top Filmes'} />}
+            {topSeries && <Slider info={topSeries} title={'Top Series'} />}
         </>
 
     )
