@@ -24,9 +24,26 @@ export const Li = styled.li`
     font-weight: 600;
     cursor: pointer;
     font-size: 28px;
+    position: relative;
 
     a {
         text-decoration: none;
         color: #fff;
+    }
+
+    &::after {
+        content: '';
+        height: 3px;
+        width: ${props => (props.isActive ? '100%' : 0)};
+        background-color: #189b20;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+        width: 100%;
     }
 `
