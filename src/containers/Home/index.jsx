@@ -66,6 +66,7 @@ const Home = () => {
                 <Background
                     img={getImages(movie.backdrop_path)}
                 >
+                    <Modal />
                     <Container>
                         <Info>
                             <h1>{movie.title}</h1>
