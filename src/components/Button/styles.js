@@ -12,7 +12,6 @@ const buttonStyles = css`
     &:hover {
         color: #FF0000;
         background: #FFF;
-        background: #ff0000;
     }
 `
 
