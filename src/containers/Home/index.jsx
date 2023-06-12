@@ -4,6 +4,7 @@ import { getImages } from '../../utils/getImages'
 import { useState, useEffect } from 'react'
 import Button from '../../components/Button'
 import Slider from '../../components/Slider'
+import Modal from '../../components/Modal'
 
 const Home = () => {
     const [movie, setMovie] = useState()
@@ -66,7 +67,7 @@ const Home = () => {
                 <Background
                     img={getImages(movie.backdrop_path)}
                 >
-                    <Modal />
+                    <Modal movieId={movie.id}/>
                     <Container>
                         <Info>
                             <h1>{movie.title}</h1>
