@@ -18,7 +18,9 @@ const Home = () => {
 
     useEffect(() => {
         async function getMovies() {
-            const { data: { results } } = await api.get('/movie/popular')
+            const {
+                data: { results }
+            } = await api.get('/movie/popular')
 
             setMovie(results[0])
         }
@@ -26,17 +28,17 @@ const Home = () => {
         getMovies()
 
         async function getTopMovies() {
-            const { data: { results } } = await api.get('/movie/top_rated')
-
-            console.log(results)
+            const {
+                data: { results }
+            } = await api.get('/movie/top_rated')
 
             setTopMovies(results)
         }
 
         async function getTopSeries() {
-            const { data: { results } } = await api.get('/tv/top_rated')
-
-            console.log(results)
+            const {
+                data: { results }
+            } = await api.get('/tv/top_rated')
 
             setTopSeries(results)
         }
@@ -70,7 +72,7 @@ const Home = () => {
                 <Background
                     img={getImages(movie.backdrop_path)}>
                     {showModal && (
-                    <Modal movieId={movie.id} setShowModal={setShowModal}/>)}
+                        <Modal movieId={movie.id} setShowModal={setShowModal} />)}
                     <Container>
                         <Info>
                             <h1>{movie.title}</h1>
