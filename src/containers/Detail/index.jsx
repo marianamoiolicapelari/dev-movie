@@ -41,7 +41,7 @@ function Detail() {
     return (
         <>
             {movie && (
-                <>
+                <>  
                     <Background image={getImages(movie.backdrop_path)} />
                     <Container>
                         <Cover>
