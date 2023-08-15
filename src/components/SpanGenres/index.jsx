@@ -1,7 +1,6 @@
 import { Container } from './styles'
 
 function SpanGenres({ genres }) {
-  console.log({ genres })
   return (
     <Container>
       {genres &&
