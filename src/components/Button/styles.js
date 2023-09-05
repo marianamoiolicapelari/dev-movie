@@ -28,6 +28,6 @@ export const ButtonRed = styled.button`
 
   &:hover {
     box-shadow: 0px 0px 7px 15px rgb(255 0 0 / 30%);
-    background: #ff0000;    
+    background: #ff0000;
   }
 `
